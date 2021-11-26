@@ -1,5 +1,3 @@
-// db.trips.find();
-
 db.trips.aggregate([
   {
     $addFields: {
