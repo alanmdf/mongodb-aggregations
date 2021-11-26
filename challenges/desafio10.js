@@ -13,12 +13,12 @@ db.trips.aggregate([
     $project: {
       _id: 0,
       tipo: "$_id",
-      duracaoViagem: { $round: ["$duracaoViagem", 2] },
+      duracaoMedia: { $round: ["$duracaoViagem", 2] },
     },
   },
   {
     $sort: {
-      duracaoViagem: 1,
+      duracaoMedia: 1,
     },
   },
 ]);
