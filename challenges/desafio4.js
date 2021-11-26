@@ -1,5 +1,3 @@
-// Referências para filtrar arrays com apenas 1 elemento: https://stackoverflow.com/questions/7811163/query-for-documents-where-array-size-is-greater-than-1
-
 db.movies.aggregate([
   {
     $sort: {
@@ -14,7 +12,7 @@ db.movies.aggregate([
   },
   {
     $match: {
-      "title_spĺit.1": { $exists: false },
+      title_spĺit: { $size: 1 },
     },
   },
 ]);
